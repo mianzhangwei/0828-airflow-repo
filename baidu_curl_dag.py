@@ -25,6 +25,7 @@ def check_curl_output(**kwargs):
     curl_output = ti.xcom_pull(task_ids='curl_baidu')
     
     # Check if the curl output contains a specific keyword to determine success
+    print("Ohhhhhh!curl_output:",curl_output)
     if '百度一下' in curl_output:
         print("Success: Content found in curl output")
     else:
